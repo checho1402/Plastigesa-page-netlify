@@ -1,0 +1,66 @@
+---
+import Card from '../components/Card.astro';
+---
+
+<section id="productos" class="glide bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+        <h2 class="bottom-element mb-8 text-3xl font-extrabold text-center tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white">Línea de productos</h2>
+        <p class="bottom-element mb-8 text-lg font-normal text-center text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200 text-pretty">Ofrecemos los mejores productos en plásticos, como bolsas, mangas y cintas.</p>
+        <div class="glide__track bottom-element" data-glide-el="track">
+        <ul class="glide__slides">
+            <li class="glide__slide">
+                <Card image="/img/products/bolsas-negras.webp" title="Producto" description="Descripción del producto." />
+            </li>
+            <li class="glide__slide">
+                <Card image="/img/products/bolsa-basura.webp" title="Producto" description="Descripción del producto." />
+            </li>
+            <li class="glide__slide">
+                <Card image="/img/products/bolsas-blancas.webp" title="Producto" description="Descripción del producto." />
+            </li>
+            <li class="glide__slide">
+                <Card image="/img/products/bolsas-transparentes.webp" title="Producto" description="Descripción del producto." />
+            </li>
+            <li class="glide__slide">
+                <Card image="/img/products/rafia.webp" title="Producto" description="Descripción del producto." />
+            </li>
+            <li class="glide__slide">
+                <Card image="/img/products/rollos.webp" title="Producto" description="Descripción del producto." />
+            </li>
+        </ul>
+        </div>
+        <!-- Contenedor de indicadores -->
+        <div class="glide__bullets flex justify-center mt-8" data-glide-el="controls[nav]">
+            <button class="glide__bullet w-3 h-3 bg-gray-400 rounded-full mx-1" data-glide-dir="=0"></button>
+            <button class="glide__bullet w-3 h-3 bg-gray-400 rounded-full mx-1" data-glide-dir="=1"></button>
+            <button class="glide__bullet w-3 h-3 bg-gray-400 rounded-full mx-1" data-glide-dir="=2"></button>
+            <button class="glide__bullet w-3 h-3 bg-gray-400 rounded-full mx-1" data-glide-dir="=3"></button>
+            <button class="glide__bullet w-3 h-3 bg-gray-400 rounded-full mx-1" data-glide-dir="=4"></button>
+            <button class="glide__bullet w-3 h-3 bg-gray-400 rounded-full mx-1" data-glide-dir="=5"></button>
+        </div>
+    </div>
+</section>
+<style>
+    .glide__bullet--active {
+        @apply bg-green-700;
+    }
+    </style>    
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Glide('.glide', {
+            type: 'carousel',
+            perView: 3,
+            breakpoints: {
+                1024: {
+                    perView: 3
+                },
+                768: {
+                    perView: 2
+                },
+                640: {
+                    perView: 1
+                }
+            }
+        }).mount();
+    });
+</script>
+    

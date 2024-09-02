@@ -1,0 +1,19 @@
+<div id="map" class="h-72 lg:h-auto w-full rounded-lg bottom-element"></div>
+
+<script>
+    declare var L: any;
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var map = L.map("map").setView([-16.4054279, -71.5128487], 20);
+
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        }).addTo(map);
+
+        L.marker([-16.4054279, -71.5128487])
+            .addTo(map)
+            .bindPopup("Plastigesa E.I.R.L.")
+            .openPopup();
+    });
+
+</script>
