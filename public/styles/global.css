@@ -1,0 +1,15 @@
+/* src/styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;500;600&display=swap');
+
+.glide__arrows .glide__arrow--left,
+.glide__arrows .glide__arrow--right {
+  @apply h-12 w-12 flex items-center justify-center bg-white text-black text-2xl rounded-full;
+}
+
+.glide__arrows .glide__arrow--left {
+  @apply left-2;
+}
+
+.glide__arrows .glide__arrow--right {
+  @apply right-2;
+}

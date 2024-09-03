@@ -71,7 +71,7 @@
             const formData = new FormData(this);
             fetch("https://odoo.plastigesa.com/send", {
                 method: "POST",
-                body: new URLSearchParams(formData), // Envía como URL-encoded
+                body: new URLSearchParams(formData),
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
                 },
@@ -83,7 +83,6 @@
                         title: "Mensaje enviado",
                         text: "Su mensaje ha sido enviado con éxito!",
                     }).then(() => {
-                        // Limpia los campos del formulario
                         document.getElementById("contactForm").reset();
                     });
                 })

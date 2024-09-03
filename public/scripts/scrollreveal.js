@@ -1,4 +1,3 @@
-// public/scrollreveal.js
 document.addEventListener("DOMContentLoaded", () => {
     const elements = [
         { selector: '.top-element', options: { origin: 'top' } },
@@ -9,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     elements.forEach((el) => {
         ScrollReveal().reveal(el.selector, {
-            duration: 1500,
+            duration: 1000,
             distance: '50px',
             easing: 'ease-in-out',
             reset: false,
