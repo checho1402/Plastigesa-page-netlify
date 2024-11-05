@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^5.1.0",
-    "@fontsource-variable/onest": "^5.0.5",
-    "astro": "^4.14.3",
-    "flowbite": "^2.5.1",
-    "pnpm": "^9.9.0",
-    "tailwindcss": "^3.4.10"
+    "@astrojs/tailwind": "^5.1.2",
+    "@fontsource-variable/onest": "^5.1.0",
+    "astro": "^4.16.9",
+    "flowbite": "^2.5.2",
+    "pnpm": "^9.12.3",
+    "tailwindcss": "^3.4.14"
   }
 }

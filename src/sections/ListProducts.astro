@@ -1,0 +1,21 @@
+---
+import products from "../config/products.json";
+---
+
+<section class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+    <h2 class="bottom-element mb-8 text-3xl font-extrabold text-center tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white">Línea de productos</h2>
+    <p class="bottom-element mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200 text-pretty text-center">Ofrecemos los mejores productos en plásticos, como bolsas, mangas y cintas.</p>
+    <div class="grid grid-cols-1 gap-y-8 lg:grid-cols-3">
+        {
+            products.map(product => (
+            <div class="card mx-auto bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 w-80 h-96 cursor-auto">
+                <img src={product.image} alt={product.description} class="w-full h-full object-cover" loading="lazy" />
+                <div class="content bg-white dark:bg-gray-800">
+                    <h3 class="uppercase dark:text-white">{product.title}</h3>
+                    <p class="dark:text-white">{product.description}</p>
+                </div>
+            </div>
+            ))
+        }
+    </div>
+</section>

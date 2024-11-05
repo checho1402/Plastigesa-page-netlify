@@ -1,0 +1,21 @@
+---
+import FactoryIcon from "../icons/Factory.astro"
+import StoreIcon from "../icons/Store.astro"
+import DeliveryIcon from "../icons/Delivery.astro"
+import Icon from "../components/Icon.astro"
+---
+
+<section class="bg-white dark:bg-gray-900" id="nosotros">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+        <h2 class="bottom-element mb-8 text-3xl font-extrabold text-center tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white">Sobre nosotros</h2>
+        <div>
+            <p class="bottom-element mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200 text-pretty"><span class="text-primary dark:text-green-300 font-bold">Plastigesa</span> es una empresa familiar 100% peruana con sede en Arequipa, somos especialistas en la producción de empaques flexibles, embalajes de alta y baja densidad. Somos líderes en la fabricación de bolsas plásticas, cintas de amarre y stretch film, ofreciendo productos de calidad para diversos usos, como industrial, agrícola, hogar, oficina, clínicas y hospitales.</p>
+        </div>
+        <div class="flex flex-col gap-y-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
+            <!-- Pasas los íconos SVG como componentes a las props -->
+            <Icon icon={FactoryIcon} title="Somos fabricantes" description="Utilizamos la mejor materia prima para la fabricación de bolsas."/>
+            <Icon icon={StoreIcon} title="Tienda de ventas" description="Contamos con tiendas retail para ventas al público al por mayor y menor."/>
+            <Icon icon={DeliveryIcon} title="Servicio de distribución" description="Contamos con una flota de camiones para realizar entregas grandes a nuestros clientes más importantes."/>
+        </div>
+    </div>
+</section>

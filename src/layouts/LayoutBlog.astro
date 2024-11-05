@@ -6,12 +6,8 @@ import "@fontsource/atkinson-hyperlegible/700-italic.css";
 import Header from "../sections/Header.astro";
 import Footer from "../sections/Footer.astro";
 import WsButton from "../components/WsButton.astro";
-interface Props {
-	title: string;
-	description: string;
-}
 
-const { title, description } = Astro.props;
+const { title, description, frontmatter } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,23 +17,18 @@ const { title, description } = Astro.props;
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link
-			rel="stylesheet"
-			href="https://unpkg.com/leaflet/dist/leaflet.css"
-		/>
-		<link rel="stylesheet" href="/styles/global.css" />
+		<link rel="stylesheet" href="/blog.css">
 		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.5.1/dist/css/glide.core.min.css">
-		<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.5.1/dist/glide.min.js" defer></script>
-		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer
-		></script>
-		<title>{title}</title>
+		<title>{frontmatter?.title ?? title}</title>
 	</head>
-	<body class="bg-white dark:bg-[#141827]">
+	<body class="bg-white dark:bg-gray-900">
 		<div>
 			<Header />
-			<slot />
+			<div class="bg-white dark:bg-gray-900">
+				<main class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
+					<slot />
+				</main>
+			</div>
 			<WsButton />
 			<Footer />
 		</div>
@@ -46,5 +37,8 @@ const { title, description } = Astro.props;
 <style is:global>
 	html {
 		font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+	}
+	p{
+		@apply text-gray-900 dark:text-white;
 	}
 </style>

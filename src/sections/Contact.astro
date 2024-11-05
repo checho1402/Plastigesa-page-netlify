@@ -1,0 +1,76 @@
+---
+import Map from "./Map.astro"
+---
+<section class="bg-white dark:bg-gray-900" id="contacto">
+    <div class="py-8 px-4 lg:py-16 mx-auto max-w-screen-xl text-center ">
+    <h2 class="bottom-element mb-8 text-3xl font-extrabold text-center tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white">Ubícanos</h2>
+    <p class="bottom-element mb-8 text-lg font-normal text-center text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200 text-pretty">Nuestra Tienda Principal: Av. Simón Bólivar N° 314 Mariano Melgar - Arequipa.</p>
+    <div class="flex flex-col gap-y-4 lg:flex-row lg:gap-x-4 ">
+        <Map />
+        <div class="w-full lg:w-2/4 bottom-element">
+            <form class="max-w-sm mx-auto text-start" id="contactForm" method="POST">
+                <div class="mb-5">
+                    <label
+                        for="nombre"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Nombre de la empresa</label
+                    >
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        required
+                    />
+                </div>
+                <div class="mb-5">
+                    <label
+                        for="email"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Correo</label
+                    >
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="Ejm: correo@correo.com"
+                        required
+                    />
+                </div>
+                <div class="mb-5">
+                    <label
+                        for="ruc"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >RUC o DNI</label
+                    >
+                    <input
+                        type="text"
+                        id="ruc"
+                        name="ruc"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                    />
+                </div>
+                <div class="mb-5">
+                    <label
+                        for="mensaje"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Mensaje</label
+                    >
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block min-h-24 max-h-24 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="Ingrese su duda o consulta..."
+                        required></textarea>
+                </div>
+                <button
+                    type="submit"
+                    class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                    >Enviar</button
+                >
+            </form>
+        </div>
+    </div>
+</div>
+</section>

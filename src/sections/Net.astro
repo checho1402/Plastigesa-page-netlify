@@ -1,0 +1,18 @@
+---
+import publicaciones from "../config/publicaciones.json"
+---
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+        <h2 class="bottom-element mb-8 text-3xl font-extrabold text-center tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white">Últimas Noticias</h2>
+        <div class="flex flex-col gap-y-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
+            {
+                publicaciones.map(
+                    publicacion => (
+                    <iframe src={publicacion.url} width="400" height="573" style="border:none;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay;  web-share" class="rounded-md h-96 p-0 m-0"></iframe>    
+                    )
+                 )
+            }
+        </div>
+    </div>
+</section>
