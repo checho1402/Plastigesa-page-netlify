@@ -1,80 +1,15 @@
-html {
-    scroll-behavior: smooth;
-}
-.card {
-    position: relative;
-    overflow: hidden;
+/* src/styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;500;600&display=swap');
+
+.glide__arrows .glide__arrow--left,
+.glide__arrows .glide__arrow--right {
+  @apply h-12 w-12 flex items-center justify-center bg-white text-black text-2xl rounded-full;
 }
 
-.card img {
-    height: 100%;
-    max-width: 100%;
-    object-fit: cover;
+.glide__arrows .glide__arrow--left {
+  @apply left-2;
 }
 
-.card .share {
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    background-color: #fff;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    top: 15px;
-    right: 15px;
-    font-size: 22px;
-}
-.card .content {
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    color: #000;
-    z-index: 99;
-    text-align: center;
-    transition: all .3s ease;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-}
-
-.card .content {
-    font-weight: 300;
-}
-
-.card .content h3 {
-    font-size: 16px;
-    line-height: 30px;
-    font-weight: 500;
-    margin-bottom: 25px;
-    position: relative;
-}
-
-.card .content h3::before {
-    content: '';
-    position: absolute;
-    width: 40%;
-    height: 2px;
-    background-color: #000;
-    bottom: -8px;
-    left: 30%;
-}
-
-.card .content p {
-    font-weight: 300;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-}
-
-.card:hover .content {
-    bottom: 0;
-}
-.content {
-    padding: 20px 15px;
+.glide__arrows .glide__arrow--right {
+  @apply right-2;
 }
